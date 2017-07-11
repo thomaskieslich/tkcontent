@@ -1,0 +1,15 @@
+tt_content.googlemaps =< lib.contentElement
+tt_content.googlemaps {
+    templateName = Content/Googlemaps
+    settings {
+        apiKey = {$template.googleApiKey}
+    }
+
+    dataProcessing {
+        10 = ThomasK\Tkcontent\DataProcessing\FlexFormProcessor
+        10{
+            fieldName = pi_flexform
+            as = flexform
+        }
+    }
+}

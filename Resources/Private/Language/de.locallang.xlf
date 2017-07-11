@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="tkcontent">
+		<header/>
+		<body>
+			<trans-unit id="content.heroimage">
+				<source>Hero Image</source>
+			</trans-unit>
+			<trans-unit id="content.cards">
+				<source>Cards</source>
+			</trans-unit>
+			<trans-unit id="content.googlemaps">
+				<source>Google Maps</source>
+			</trans-unit>
+			<trans-unit id="content.googlemaps.big_link">
+				<source>Show on big Map</source>
+				<target>Auf Großer Karte ansehen >></target>
+			</trans-unit>
+			<trans-unit id="content.googlemaps.settings">
+				<source>Map Settings</source>
+			</trans-unit>
+			<trans-unit id="content.googlemaps.zoom">
+				<source>Zoom</source>
+			</trans-unit>
+			<trans-unit id="content.googlemaps.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="content.googlemaps.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="content.googlemaps.link">
+				<source>Link on Map</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

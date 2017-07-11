@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.0">
+    <file datatype="plaintext" original="messages" product-name="tkcontent" source-language="en">
+        <header/>
+        <body>
+            <trans-unit id="content.div_content">
+                <source>Content</source>
+            </trans-unit>
+
+            <!--Heroimage-->
+            <trans-unit id="content.heroimage">
+                <source>Hero Image</source>
+            </trans-unit>
+
+            <!--Cards-->
+            <trans-unit id="content.cards">
+                <source>Cards</source>
+            </trans-unit>
+            <trans-unit id="content.cards.cols">
+                <source>Cards per row</source>
+            </trans-unit>
+            <trans-unit id="content.cards.card_item">
+                <source>Card</source>
+            </trans-unit>
+            <trans-unit id="content.cards.type">
+                <source>Card Type</source>
+            </trans-unit>
+            <trans-unit id="content.cards.type.textimage">
+                <source>Text with image</source>
+            </trans-unit>
+            <trans-unit id="content.cards.type.ttcontent">
+                <source>Content Element</source>
+            </trans-unit>
+            <trans-unit id="content.cards.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="content.cards.bodytext">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="content.cards.tt_content">
+                <source>Parent Record</source>
+            </trans-unit>
+            <trans-unit id="content.cards.record">
+                <source>Content Record</source>
+            </trans-unit>
+            <trans-unit id="content.cards.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="content.cards.link_label">
+                <source>Link Label</source>
+            </trans-unit>
+            <trans-unit id="content.cards.image">
+                <source>Image</source>
+            </trans-unit>
+
+            <trans-unit id="content.label.icon">
+                <source>Icon</source>
+            </trans-unit>
+            <trans-unit id="content.label.teaserimage">
+                <source>Teaser Image</source>
+            </trans-unit>
+
+
+            <trans-unit id="content.slider">
+                <source>Slider</source>
+            </trans-unit>
+
+            <trans-unit id="content.googlemaps">
+                <source>Google Maps</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.big_link">
+                <source>Show on big Map</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.settings">
+                <source>Map Settings</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.width">
+                <source>Map Width</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.height">
+                <source>Map Height</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.zoom">
+                <source>Zoom</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.latitude">
+                <source>Latitude</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.longitude">
+                <source>Longitude</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.link">
+                <source>Link on Map</source>
+            </trans-unit>
+            <trans-unit id="content.googlemaps.link_label">
+                <source>Link Label</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

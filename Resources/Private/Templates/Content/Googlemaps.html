@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:tk="http://typo3.org/ns/ThomasK/Tkcontent/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div id="map-{data.uid}" class="google-map" style="width:{flexform.width}; height:{flexform.height}" data-lat="{flexform.latitude}" data-lon="{flexform.longitude}" data-zoom="{flexform.zoom}">
+        Map
+    </div>
+    <f:if condition="{flexform.link}">
+        <div class="link">
+            <f:link.typolink parameter="{flexform.link}">
+                {flexform.link_label}
+            </f:link.typolink>
+        </div>
+    </f:if>
+
+    <tk:googleapi path="https://maps.googleapis.com/maps/api/js?key={settings.apiKey}&callback=initGoogleMap" async="true"/>
+</f:section>
+
+</html>

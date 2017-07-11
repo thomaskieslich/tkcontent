@@ -1,0 +1,27 @@
+mod.wizards.newContentElement.wizardItems {
+    special.elements {
+
+        heroimage {
+            iconIdentifier = ce_heroimage
+            title = LLL:EXT:tkcontent/Resources/Private/Language/locallang.xlf:content.heroimage
+            tt_content_defValues.CType = heroimage
+        }
+
+        cards {
+            iconIdentifier = ce_cards
+            title = LLL:EXT:tkcontent/Resources/Private/Language/locallang.xlf:content.cards
+            tt_content_defValues.CType = cards
+        }
+
+        googlemaps {
+            iconIdentifier = ce_googlemaps
+            title = LLL:EXT:tkcontent/Resources/Private/Language/locallang.xlf:content.googlemaps
+            tt_content_defValues.CType = googlemaps
+        }
+
+    }
+
+    special.show := addToList(heroimage)
+    special.show := addToList(cards)
+    special.show := addToList(googlemaps)
+}

@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+<f:section name="Main">
+    <f:if condition="{files.0}">
+        <img src="{f:uri.image(image:files.0, width: settings.sizes.desktop.width, height: settings.sizes.desktop.height)}" alt="{files.0.alternative}" title="{files.0.title}"
+             srcset="{f:uri.image(image: files.0, width: settings.sizes.mobile.width, height: settings.sizes.mobile.height)} {settings.sizes.mobile.width}w,
+                     {f:uri.image(image: files.0, width: settings.sizes.medium.width, height: settings.sizes.medium.height)} {settings.sizes.medium.width}w,
+                     {f:uri.image(image:files.0, width: settings.sizes.desktop.width, height: settings.sizes.desktop.height)} {settings.sizes.desktop.width}w"
+             sizes="100vw">
+    </f:if>
+</f:section>
+</html>

@@ -1,0 +1,45 @@
+tt_content.cards =< lib.contentElement
+tt_content.cards {
+    templateName = Content/Cards
+    settings {
+        mobile {
+            width = 320
+            height = 180c
+        }
+
+        medium {
+            width = 640
+            height = 360c
+        }
+
+        desktop {
+            width = 960
+            height = 540c
+        }
+    }
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+        10 {
+            if.isTrue.field = tx_tkcontent_cards_item
+            table = tx_tkcontent_cards_item
+            pidInList.field = pid
+            where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+            }
+
+            orderBy = sorting
+
+            dataProcessing {
+                10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = card_image
+                }
+            }
+
+            as = cards
+        }
+    }
+}

@@ -1,0 +1,83 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <div class="cardholder">
+        <div class="card-row medium-up-{data.cols}" data-equalizer>
+            <f:if condition="{cards}">
+                <f:for each="{cards}" as="card">
+                    <f:switch expression="{card.data.item_type}">
+                        <f:case value="1">
+                            <f:render section="type1" arguments="{data: card.data, files: card.files}"/>
+                        </f:case>
+                        <f:case value="2">
+                            <f:render section="type2" arguments="{data: card.data}"/>
+                        </f:case>
+                        <f:case default="1">
+                            <f:render section="type1" arguments="{data: card.data, files: card.files}"/>
+                        </f:case>
+                    </f:switch>
+                </f:for>
+            </f:if>
+        </div>
+    </div>
+</f:section>
+
+
+<f:section name="type1">
+    <div class="column">
+        <div class="card" data-equalizer-watch>
+            <f:if condition="{files.0}">
+                <f:link.typolink parameter="{data.link}">
+                    <figure>
+                        <img sizes="(min-width: 40em) 298px, 100vw"
+                             srcset="{f:uri.image(image: files.0, width: settings.mobile.width, height: settings.mobile.height)} {settings.mobile.width}w,
+                                    {f:uri.image(image: files.0, width: settings.medium.width, height: settings.medium.height)} {settings.medium.width}w,
+                                    {f:uri.image(image: files.0, width: settings.desktop.width, height: settings.desktop.height)} {settings.desktop.width}w"
+                             src="{f:uri.image(image:files.0)}" alt="{files.0.alternative}" title="{files.0.title}"/>
+                    </figure>
+                </f:link.typolink>
+            </f:if>
+
+            <div class="card-divider">
+                <f:if condition="{data.header}">
+                    <h4>{data.header}</h4>
+                </f:if>
+            </div>
+
+            <div class="card-section">
+                <f:if condition="{data.bodytext}">
+                    <f:format.html parseFuncTSPath="lib.parseFunc_RTE ">{data.bodytext -> f:format.crop(maxCharacters: '220', append: '…')}</f:format.html>
+                </f:if>
+                <f:if condition="{data.link}">
+                    <f:link.typolink parameter="{data.link}">{data.link_label}</f:link.typolink>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="type2">
+    <div class="column">
+        <div class="card" data-equalizer-watch>
+            <div class="card-divider">
+                <f:if condition="{data.header}">
+                    <h4>{data.header}</h4>
+                </f:if>
+            </div>
+
+            <div class="card-section">
+                <f:if condition="{data.record}">
+                    <f:cObject typoscriptObjectPath="lib.tx_tkcontent.contentElementRendering">{data.record}</f:cObject>
+                </f:if>
+                <f:if condition="{data.link}">
+                    <f:link.typolink parameter="{data.link}">{data.link_label}</f:link.typolink>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+</html>

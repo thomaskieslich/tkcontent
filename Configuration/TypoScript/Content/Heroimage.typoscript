@@ -1,0 +1,29 @@
+tt_content.heroimage =< lib.contentElement
+tt_content.heroimage {
+    templateName = Content/Heroimage
+    settings {
+        sizes {
+            mobile {
+                width = 480
+                height = 150c
+            }
+
+            medium {
+                width = 960
+                height = 300c
+            }
+
+            desktop {
+                width = 1920
+                height = 600c
+            }
+        }
+    }
+
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+        }
+    }
+}
